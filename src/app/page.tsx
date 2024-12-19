@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { ChangeEvent, FormEvent, useState } from "react";
@@ -32,7 +33,7 @@ export default function Home() {
 
   return (
     <>
-      <form method="POST" onSubmit={login} >
+      {/* <form method="POST" onSubmit={login} >
       <div className="bg-gray-00">
       <div className="bg-red-00 container mx-auto h-screen  flex justify-center items-center font-serif">
         <div className=" bg- p-8 rounded  w-full max-w-lg">
@@ -60,7 +61,22 @@ export default function Home() {
         </div>
       </div>
       </div>
-      </form>
+      </form> */}
+      <div className="flex justify-center items-center text-gray-700 font-bold text-2xl">
+      Home Page
+      </div>
+
+      <div className="flex justify-center items-center  hover:underline font-bold text-xl mt-10 ">
+        <Link href={'/product'}>
+        See All Product
+        </Link>
+      </div>
+
+      <div className="flex justify-center items-center  hover:underline font-bold text-xl mt-10 ">
+        <Link href={'/student'}>
+        See All Students
+        </Link>
+      </div>
     </>
   );
 }
