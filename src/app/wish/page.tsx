@@ -44,15 +44,21 @@ const Page=()=>{
     //Resulting array: [1,2]
     const handleDelete=(id:number):void =>{
        setFruitCountry(fruitCountry.filter(item => item.id !== id))
+       console.log('deleted')
     }
-
+    const handleDeleteAll=():void=>{
+        setFruitCountry([])
+      }
 return(
     <> 
     <div >
-    <WishList data={fruitCountry} onDelete={handleDelete}/>
+    <WishList data={fruitCountry}
+     onDelete={handleDelete} 
+     onDeleteAll={handleDeleteAll}
+    />
     </div>
     <div >
-    <WishTable data={fruitCountry} onDelete={handleDelete}/>
+    <WishTable data={fruitCountry} />
     </div>
     </>
 )

@@ -1,5 +1,6 @@
 import React from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import PrintPge from "./PrintPage";
 
 interface WishListProps {
     data: {
@@ -8,13 +9,23 @@ interface WishListProps {
         country: string;
     }[];
     onDelete: (id: number) => void;
+    onDeleteAll: () => void;
 }
 
-const WishList: React.FC<WishListProps> = ({ data, onDelete }) => {
+const WishList: React.FC<WishListProps> = ({ data, onDelete,onDeleteAll }) => {
     return (
         <>
             <div className="text-5xl text-blue-400 font-bold flex  justify-center items-center">
                 WishList is here
+            </div>
+
+            <div>
+                <PrintPge/>
+            </div>
+
+            <div className="flex justify-center items-center gap-2"
+            onClick={onDeleteAll}>
+            <div className="text-base font-normal">Remove all</div>
             </div>
 
             <div className="mt-10">

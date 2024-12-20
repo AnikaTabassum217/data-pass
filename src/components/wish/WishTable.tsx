@@ -6,10 +6,10 @@ interface WishTableProps{
     name:string;
     country:string;
   }[],
-  onDelete:(id:number)=>void
+ // onDelete:(id:number)=>void
 
 }
-const WishTable:React.FC<WishTableProps> = ({data,onDelete}) => {
+const WishTable:React.FC<WishTableProps> = ({data}) => {
     return (
         <>
             <div className="text-5xl text-red-400 font-bold flex justify-center items-center mt-20">WishTable is here</div>
